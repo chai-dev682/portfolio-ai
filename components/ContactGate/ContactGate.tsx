@@ -36,7 +36,7 @@ const ContactGate = (): JSX.Element => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
+      if (response.ok) {
         // Store in localStorage for local state management
         localStorage.setItem("contactFormData", JSON.stringify(formData));
         localStorage.setItem("contactFormSubmitted", "true");
